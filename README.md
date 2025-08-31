@@ -9,6 +9,9 @@
 
 This mod represents a comprehensive custom outfit and body overhaul for the character Lune. The project is currently in active development.
 
+## Disclaimer
+
+This is a fan-made modification. It is not affiliated with or endorsed by the original game developers or publishers.
 ### Skeleton Import Anomaly: Dual 'Root' References
 
 During the asset pipeline process, specifically when handling the base `SK_UE5_Mannequin` skeleton, a structural inconsistency was identified. The original mannequin skeleton includes both:
