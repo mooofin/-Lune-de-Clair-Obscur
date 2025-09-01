@@ -1,6 +1,7 @@
 ![image](https://github.com/user-attachments/assets/6be68108-c954-4d15-b26e-11b3f61e71a3)
 
 
+It's my first Clair Obscur mod!   I'm very new to this game so I know the model has some clipping.  I don't know if there are any other areas this mod messes up in but so far in limited tests it seems fine!
 
 
 
