@@ -14,7 +14,8 @@ This mod represents a comprehensive custom outfit and body overhaul for the char
 This is a fan-made modification. It is not affiliated with or endorsed by the original game developers or publishers.
 
 
-##  FAQ: File Types Explained
+#  FAQ:3
+## File Types Explained
 
 When modding **Lune**, you will encounter several different Unreal Engine file formats. Understanding their purpose helps you know which ones matter when creating or replacing assets.
 
@@ -26,7 +27,7 @@ You may also encounter **`.usmap`** files. These are not assets themselves, but 
 
 Finally, **`.pskx`** files represent skeletal meshes. This is an extended version of Unreal’s older `.psk` format and is typically produced when extracting models with tools like UE Viewer (UModel). `.pskx` files store 3D mesh geometry, bone hierarchies, skin weights, multiple UV sets, and normals. They are essential for character and outfit models, and are often paired with `.psa` files, which contain animation data. For mods that involve dress changes, `.pskx` files are the core format you’ll be working with when swapping or editing models.
 
-In short, `.pak` and `.pac` are the high-level archives, `.ucas` and `.utoc` are Unreal’s newer bulk data and indexing system, `.usmap` provides the metadata needed to read and edit assets, and `.pskx` holds the actual 3D skeletal meshes used for models such as outfits.
+
 
 
 
