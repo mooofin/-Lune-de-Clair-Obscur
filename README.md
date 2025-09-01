@@ -12,6 +12,26 @@ This mod represents a comprehensive custom outfit and body overhaul for the char
 ## Disclaimer
 
 This is a fan-made modification. It is not affiliated with or endorsed by the original game developers or publishers.
+
+
+##  FAQ: File Types Explained
+
+When modding **Lune**, you will encounter several different Unreal Engine file formats. Understanding their purpose helps you know which ones matter when creating or replacing assets.
+
+The most common are **`.pak` and `.pac`** files. These act as large container archives, similar to `.zip` files, and hold the game’s packaged assets such as textures, meshes, animations, and audio. `.pak` is the standard Unreal Engine archive format, while `.pac` is a variation used by certain publishers but serves the same role. Mods usually work by creating or overriding these archives so that new content replaces the original.
+
+More recent Unreal Engine versions (UE 4.25+ and UE5) introduced **`.ucas` and `.utoc`** files, which work together as part of the virtualized asset system. The `.ucas` file contains the actual bulk asset data, while the `.utoc` file acts as the index or table of contents, telling the engine where specific chunks of data are located. The game always loads the `.utoc` first and then streams from `.ucas`. Both are required for assets to function properly.
+
+You may also encounter **`.usmap`** files. These are not assets themselves, but metadata that define how Unreal Engine objects are structured. They contain property names, type mappings, and serialization layouts used for `.uasset` and `.uexp` files. Many games strip this data to make reverse-engineering harder, which is why external `.usmap` files are often needed. Tools such as FModel or UAssetGUI rely on `.usmap` to correctly parse and display assets; without it, the data appears scrambled or unreadable.
+
+Finally, **`.pskx`** files represent skeletal meshes. This is an extended version of Unreal’s older `.psk` format and is typically produced when extracting models with tools like UE Viewer (UModel). `.pskx` files store 3D mesh geometry, bone hierarchies, skin weights, multiple UV sets, and normals. They are essential for character and outfit models, and are often paired with `.psa` files, which contain animation data. For mods that involve dress changes, `.pskx` files are the core format you’ll be working with when swapping or editing models.
+
+In short, `.pak` and `.pac` are the high-level archives, `.ucas` and `.utoc` are Unreal’s newer bulk data and indexing system, `.usmap` provides the metadata needed to read and edit assets, and `.pskx` holds the actual 3D skeletal meshes used for models such as outfits.
+
+
+
+
+
 ### Skeleton Import Anomaly: Dual 'Root' References
 
 During the asset pipeline process, specifically when handling the base `SK_UE5_Mannequin` skeleton, a structural inconsistency was identified. The original mannequin skeleton includes both:
